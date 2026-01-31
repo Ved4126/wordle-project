@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="Ved Dabhi" content="Wordle Game">
+        <meta name="description" content="A fun word guessing game">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>Wordle</title>
+        <link rel="icon" href="icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+
+
+    </head>
+
+    <body>
+
+        <div id="landing-page">
+            <img src="logo.png" alt="Wordle Logo">
+            <h1><strong>Wordle</strong></h1><br>
+
+            
+            <p>Get 6 chances to guess</p>
+            <p>a 5-letter word.</p><br><br>
+
+            
+            <button id="play">Play</button>
+            
+
+            <br><br><br><br>
+
+            <p id="creator">Created by Ved Dabhi</p>
+        </div>
+
+        <div id="game-page" style="display: none;">
+
+            <h1 id="second-page">WORDLE</h1>
+            
+            <hr>
+            <div id="game-board"></div>
+            <div id="toast" class="toast hidden"></div>
+            <div id="keyboard"></div>
+
+            <div id="end-modal" class="modal hidden">
+            <div class="modal-box">
+            <h2 id="end-title">Game Over</h2>
+            <p id="end-message"></p>
+
+                    <div class="modal-actions">
+                        <button id="play-again" class="modal-btn">Play Again</button>
+                        <button id="exit" class="modal-btn outline">Exit</button>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+
+        <!-- solidgray and the turns black on wrong letter and then turns yellow on right guess
+          but wrong position and then turns green on right position-->
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

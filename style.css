@@ -1,0 +1,258 @@
+html{
+    font: Gotham bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+body{
+
+    background-color: lightgrey;
+    color: black;
+}
+
+img{
+    display: block;
+    padding-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3%;
+    height: auto;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+h1,p{
+    margin: 0;
+}
+
+p{
+    
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 42px;
+}
+
+#play{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding: 18px 36px;
+    border-radius: 35px;
+    background-color: black;
+    color: rgb(219, 216, 216);
+}
+
+#creator{
+
+    font-size: 20px;
+
+}
+
+#landing-page{
+    background: lightgrey;
+    min-height: 100vh;
+}
+
+#game-page{
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+}
+html, body{
+     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: black;
+}
+
+#second-page{
+    text-align: center;
+    font: Gotham bold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 56px;
+    color: rgb(155, 190, 84)
+}
+
+#game-board{
+
+    display: grid;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 342px;
+    grid-template-rows: repeat(6, 60px);
+    grid-template-columns: repeat(5, 60px);
+    gap: 7px;
+    padding: 7px;
+    transition: opacity 0.2s ease;
+    
+}
+
+.cell{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+  border-radius: 2px;
+  background-color: rgb(13, 2, 2);
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cell.flip{
+    animation: flip 0.5s ease forwards;
+}
+
+@keyframes flip{
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0); }
+}
+
+.correct{
+    background-color: green;
+    color: white;
+}
+
+.present{
+    background-color: rgb(213, 167, 28);
+    color: white;
+}
+
+.absent{
+    background-color: rgb(45, 43, 43);
+    color: white;
+}
+
+.toast{
+    position: fixed;
+
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: 600;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.toast.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#keyboard{
+    display: grid;
+    width: min(750px, 95vw);
+    margin: 150px auto 0;
+    gap: 8px;
+}
+
+.kb-row{
+    display: grid;
+    gap: 6px;
+}
+
+.kb-row.row-1{
+    grid-template-columns: repeat(10, 1fr); 
+}
+.kb-row.row-2{
+    grid-template-columns: repeat(9, 1fr);
+}
+.kb-row.row-3{
+    grid-template-columns: 1.5fr repeat(7, 1fr) 1.5fr;
+}
+
+.key{
+    border: none;
+    border-radius: 5px;
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+    background: #818384;
+    color: white;
+    user-select: none;
+}
+
+.key.big{
+    font-size: 13px;
+}  
+
+.correct{
+    background-color: green;
+    color: white;
+}
+
+.present{
+    background-color: rgb(213, 167, 28);
+    color: white;
+}
+
+.absent{
+    background-color: rgb(45, 43, 43);
+    color: white;
+}
+
+.modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.hidden{
+  display: none;
+}
+
+.modal-box{
+  width: min(420px, 90vw);
+  background: #111;
+  color: white;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.modal-actions{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.modal-btn{
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: white;
+  color: black;
+}
+
+.modal-btn.outline{
+  background: transparent;
+  color: white;
+  border: 1px solid #555;
+}
